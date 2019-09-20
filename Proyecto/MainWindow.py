@@ -7,6 +7,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from TableWindow import *
+
 form_class = uic.loadUiType("MainWindow.ui")[0]
 
 class MainWindow(QtWidgets.QMainWindow, form_class):
@@ -24,7 +25,7 @@ class MainWindow(QtWidgets.QMainWindow, form_class):
         self.last_node.setPlaceholderText("Nodo Destino")
         self.load_file.clicked.connect(self.loadFile)
         self.create_map.clicked.connect(self.passToOpen)
-        self.create_table.clicked.connect(self.tableWindow)
+        self.create_table.clicked.connect(self.openTable)
         #self.converter()
         self.setFocus()
 
@@ -53,12 +54,16 @@ class MainWindow(QtWidgets.QMainWindow, form_class):
         list_content = t.split(" ")#Quito los espacios y convierto el texto en lista
         return list_content
 
-    def tableWindow(self):  #funcion que despliega la ventana emergente del TableWindow.py
+    def openTable(self):
+        self.table = TableWindow(parent = self)#Instancia de la TableWindow pasando el self de la MainWindow como parametro
+        self.table.show() 
+
+    """def tableWindow(self):  #funcion que despliega la ventana emergente del TableWindow.py
         table = QtWidgets.QPlainTextEdit()
-        ui = Ui_Form() #instancia de la tableWindow
+        ui = Ui_Form() #instancia de la clase principal del archivo de la tableWindow
         ui.setupUi(table)
         table.show()
-        table.exec_()   
+        #table.exec_()   """
 
                                              
 
