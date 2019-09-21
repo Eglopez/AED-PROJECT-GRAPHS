@@ -9,3 +9,7 @@ class TableWindow(QtWidgets.QWidget):
         self.setWindowTitle("Tabla")
         self.setFocus()
         self.table.setReadOnly(True)
+        
+
+
+

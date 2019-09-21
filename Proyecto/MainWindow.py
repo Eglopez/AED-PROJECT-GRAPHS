@@ -7,7 +7,6 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from TableWindow import *
-
 form_class = uic.loadUiType("MainWindow.ui")[0]
 
 class MainWindow(QtWidgets.QMainWindow, form_class):
@@ -28,7 +27,7 @@ class MainWindow(QtWidgets.QMainWindow, form_class):
         self.create_table.clicked.connect(self.openTable)
         #self.converter()
         self.setFocus()
-
+    
     def passToOpen(self):#Funcion para pasar el texto ingresado a openChild
         self.openChild(self.printPlainText())
    
@@ -56,14 +55,7 @@ class MainWindow(QtWidgets.QMainWindow, form_class):
 
     def openTable(self):
         self.table = TableWindow(parent = self)#Instancia de la TableWindow pasando el self de la MainWindow como parametro
-        self.table.show() 
-
-    """def tableWindow(self):  #funcion que despliega la ventana emergente del TableWindow.py
-        table = QtWidgets.QPlainTextEdit()
-        ui = Ui_Form() #instancia de la clase principal del archivo de la tableWindow
-        ui.setupUi(table)
-        table.show()
-        #table.exec_()   """
+        self.table.show()
 
                                              
 
@@ -71,4 +63,4 @@ aplicacion = QApplication(sys.argv)
 ventana = MainWindow()
 ventana.show()
     
-sys.exit(aplicacion.exec_())         
+sys.exit(aplicacion.exec_())  
