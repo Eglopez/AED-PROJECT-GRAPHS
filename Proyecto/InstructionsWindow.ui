@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>instWindow</class>
+ <widget class="QMainWindow" name="instWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>390</width>
+    <height>342</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPlainTextEdit" name="instructions_text">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>371</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string>Ejemplo de como debe ingresarse las caracteristicas:
+
+A:
+        B:
+               caracteristica1:valor1
+               caracteristica2:valor2
+B:
+        A:
+               caracteristica1:valor1
+               caracteristica2:valor2
+
+Instrucciones:
+1. Escriba sin tabulacion el nombre del vertice seguido de dos puntos.
+2. Precedido de una tabulacion, escriba el nombre de los vertices aristas seguido de dos puntos.
+3. Precedido de dos tabulaciones escriba las caracteristicas que existe entre el vertice y el nodo arista antes mencionado, las caracteristicas deben ingresarse de la siguiente forma:
+
+  nombreCaracteristica:valorDeLaCaracteristica.
+
+La cantidad maxima de usuarios que pueden estar conectados es de 1000 asi como la distancia maxima entre nodos es de 1000 metros.
+
+No debe dejar saltos de linea entre nodos ni al final del archivo.
+
+NOTA: Para poder ver la tabla de rutas primero debe crear el mapa.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ok">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>310</y>
+      <width>111</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Aceptar</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
