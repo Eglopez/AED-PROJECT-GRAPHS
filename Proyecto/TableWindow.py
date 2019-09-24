@@ -40,6 +40,3 @@ class TableWindow(QtWidgets.QWidget):
             totalWeight = totalWeight + value
             current = array[i]
         return round(totalWeight,2)
-
-
-
